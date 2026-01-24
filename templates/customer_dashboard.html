@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Dashboard | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/restaurants">Restaurants</a></li>
+    <li><a href="/cart">Cart <span id="cart-badge">0</span></a></li>
+    <li><a href="/profile">Profile</a></li>
+  </ul>
+
+  <a href="/logout" class="signin-btn">Logout</a>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+
+  <div class="dashboard-header">
+    <h1>Hello, Customer 👋</h1>
+    <p>Order food, track deliveries, and manage your account</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <h2 id="total-orders">0</h2>
+      <p>Total Orders</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="cart-items">0</h2>
+      <p>Items in Cart</p>
+    </div>
+    <div class="stat-card">
+      <h2>25–30 min</h2>
+      <p>Avg Delivery</p>
+    </div>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <h2 class="section-title">Quick Actions</h2>
+  <div class="actions">
+
+    <div class="action-card" onclick="goToMenu()">
+      🍽
+      <h3>Browse Menu</h3>
+      <p>Explore food from nearby restaurants</p>
+    </div>
+
+    <div class="action-card" onclick="goToCart()">
+      🛒
+      <h3>View Cart</h3>
+      <p>Check items before checkout</p>
+    </div>
+
+    <div class="action-card" onclick="goTotracking()">
+      📦
+      <h3>My Orders</h3>
+      <p>Track your active & past orders</p>
+    </div>
+
+    <div class="action-card" onclick="goToProfile()">
+      👤
+      <h3>Profile</h3>
+      <p>Manage address & details</p>
+    </div>
+
+  </div>
+
+  <!-- RECENT ORDERS -->
+  <h2 class="section-title">Recent Orders</h2>
+  <div class="recent-orders">
+    <div class="order-card">
+      <h4>Cheese Pizza</h4>
+      <p>Status: <span class="delivered">Delivered</span></p>
+      <small>₹249 • Yesterday</small>
+    </div>
+
+    <div class="order-card">
+      <h4>Paneer Butter Masala</h4>
+      <p>Status: <span class="processing">Preparing</span></p>
+      <small>₹199 • Today</small>
+    </div>
+  </div>
+
+</section>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

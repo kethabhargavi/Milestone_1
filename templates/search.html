@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodExpress - Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/search.css">
+</head>
+<body>
+    
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/cart">Cart <span id="cart-badge">0</span></a></li>
+  </ul>
+  <a href="/login" class="signin-btn">Sign In</a>
+</nav>
+
+<section class="search-section">
+  <h1>Find Your Favorite Food or Restaurant</h1>
+  <input type="text" id="search-input" placeholder="Search for dishes or restaurants..." oninput="filterResults()">
+</section>
+
+<section class="search-results" id="search-results">
+  <!-- Results will be dynamically added here -->
+</section>
+
+<script src="/static/js/search.js"></script>
+</body>
+</html>
+

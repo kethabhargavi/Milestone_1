@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body class="auth-body">
+
+<!-- ================= SIGN IN CONTAINER ================= -->
+<div class="auth-container">
+
+  <!-- LEFT IMAGE / BRAND -->
+  <div class="auth-left">
+    <h1>Food<span>Express</span></h1>
+    <p>Order • Track • Deliver • Manage</p>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="auth-right">
+    <h2>Sign In</h2>
+    <p class="subtitle">Choose your role and continue</p>
+
+    <!-- ROLE SELECT -->
+    <div class="role-select">
+      <button onclick="selectRole('customer')" class="role-btn active">Customer</button>
+      <button onclick="selectRole('restaurant')" class="role-btn">Restaurant</button>
+      <button onclick="selectRole('delivery')" class="role-btn">Delivery</button>
+      <button onclick="selectRole('admin')" class="role-btn">Admin</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form onsubmit="login(event)">
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Password" required>
+
+      <button type="submit" class="auth-btn">
+        Continue →
+      </button>
+    </form>
+
+    <p class="helper">By continuing, you agree to FoodExpress Terms & Privacy Policy</p>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

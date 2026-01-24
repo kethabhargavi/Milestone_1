@@ -1,0 +1,183 @@
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+.auth-body {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===============================
+   LEFT BRAND SECTION
+================================ */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #fc8019, #ff9f43);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px;
+}
+
+.auth-left h1 {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.auth-left h1 span {
+  opacity: 0.9;
+}
+
+.auth-left p {
+  font-size: 18px;
+  margin-top: 16px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+/* ===============================
+   RIGHT AUTH SECTION
+================================ */
+.auth-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #282c3f;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #686b78;
+  margin: 10px 0 28px;
+}
+
+/* ===============================
+   ROLE SELECT BUTTONS
+================================ */
+.role-select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.role-btn {
+  padding: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #d4d5d9;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #282c3f;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.role-btn:hover {
+  border-color: #fc8019;
+  color: #fc8019;
+}
+
+.role-btn.active {
+  background: #fc8019;
+  color: #ffffff;
+  border-color: #fc8019;
+}
+
+/* ===============================
+   FORM INPUTS
+================================ */
+form input {
+  width: 100%;
+  padding: 15px 14px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  border: 1px solid #d4d5d9;
+  font-size: 14px;
+  color: #282c3f;
+}
+
+form input::placeholder {
+  color: #93959f;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #fc8019;
+}
+
+/* ===============================
+   CONTINUE BUTTON
+================================ */
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  background: #fc8019;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.auth-btn:hover {
+  background: #f57200;
+}
+
+/* ===============================
+   FOOTER TEXT
+================================ */
+.helper {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #7e808c;
+  line-height: 1.5;
+}
+
+/* ===============================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .auth-right {
+    padding: 50px 30px;
+  }
+
+  .role-select {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery History | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/delivery.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+  <ul class="nav-links">
+    <li><a href="/delivery-dashboard">Dashboard</a></li>
+    <li><a href="/delivery-history" class="active">History</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+
+<!-- HISTORY -->
+<section class="delivery-container">
+  <h1>📦 Delivery History</h1>
+  <p class="subtitle">All your completed deliveries</p>
+
+  <div class="delivery-orders" id="history-orders">
+    <!-- Delivered orders injected here -->
+  </div>
+</section>
+
+<script src="/static/js/delivery.js"></script>
+</body>
+</html>

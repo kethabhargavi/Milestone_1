@@ -1,0 +1,98 @@
+.signin-container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+/* LEFT IMAGE */
+.signin-image {
+  flex: 1;
+  background: linear-gradient(135deg, #fc8019, #ffb347);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.signin-image h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.signin-image p {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+/* RIGHT CARD */
+.signin-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  background: #fff;
+}
+
+.signin-card h2 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* ROLE BUTTONS */
+.role-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.role-buttons button {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.role-buttons button:hover {
+  background: #fc8019;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(252,128,25,0.25);
+}
+
+/* TERMS */
+.terms {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #777;
+}
+
+.terms span {
+  color: #fc8019;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .signin-image {
+    height: 220px;
+    padding: 30px;
+  }
+
+  .signin-card {
+    padding: 40px;
+  }
+}

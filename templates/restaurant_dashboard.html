@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Dashboard | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/res.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span> Restaurant</div>
+
+  <ul class="nav-links">
+    <li><a href="/restaurant_dashboard" class="active">Dashboard</a></li>
+    <li><a href="/tracking">Orders</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/profile">Profile</a></li>
+  </ul>
+
+  <a href="/logout" class="signin-btn">Logout</a>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+
+  <div class="dashboard-header">
+    <h1>Welcome, Restaurant Owner 👨‍🍳</h1>
+    <p>Manage orders, menu, and track your earnings</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <h2 id="today-orders">0</h2>
+      <p>Today's Orders</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="total-orders">0</h2>
+      <p>Total Orders</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="total-revenue">₹0</h2>
+      <p>Total Revenue</p>
+    </div>
+    <div class="stat-card">
+      <h2 class="online">Online</h2>
+      <p>Restaurant Status</p>
+    </div>
+  </div>
+
+  <!-- RECENT ORDERS -->
+  <h2 class="section-title">Recent Orders</h2>
+  <div class="recent-orders">
+
+    <div class="order-card">
+      <h4>Order #1023</h4>
+      <p>Paneer Biryani</p>
+      <span class="status delivered">Delivered</span>
+    </div>
+
+    <div class="order-card">
+      <h4>Order #1024</h4>
+      <p>Veg Burger Combo</p>
+      <span class="status processing">Preparing</span>
+    </div>
+
+    <div class="order-card">
+      <h4>Order #1025</h4>
+      <p>Masala Dosa</p>
+      <span class="status pending">Pending</span>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="/static/js/res.js"></script>
+</body>
+</html>

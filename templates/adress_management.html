@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Addresses | FoodExpress</title>
+  <link rel="stylesheet" href="/static/css/profile.css" />
+  <link rel="stylesheet" href="/static/css/theme.css" />
+</head>
+<body>
+  
+<nav class="dashboard-nav">
+  <h2>📍 Address Management</h2>
+</nav>
+
+<section class="content-container">
+
+  <form id="address-form" class="card">
+    <h3>Add New Address</h3>
+
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="text" id="phone" placeholder="Phone Number" required />
+    <textarea id="address" placeholder="Complete Address" required></textarea>
+
+    <button type="submit">Save Address</button>
+  </form>
+
+  <div id="address-list"></div>
+
+</section>
+
+<script src="/static/js/address.js"></script>
+</body>
+</html>

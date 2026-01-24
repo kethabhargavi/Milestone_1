@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/cart" class="active">
+      Cart <span id="cart-badge">0</span>
+    </a></li>
+    <li><a href="/checkout">Checkout</a></li>
+  </ul>
+
+  <a href="/login" class="signin-btn">Sign In</a>
+</nav>
+
+<!-- CART -->
+<section class="cart-container">
+  <h1>Your Cart</h1>
+
+  <div id="cart-items"></div>
+
+  <div class="cart-summary">
+    <div>
+      <p>Item Total</p>
+      <p>Delivery Fee</p>
+      <p>Taxes</p>
+      <h3>Total</h3>
+    </div>
+    <div>
+      <p id="item-total">₹0</p>
+      <p>₹30</p>
+      <p>₹20</p>
+      <h3 id="grand-total">₹0</h3>
+    </div>
+  </div>
+
+  <br>
+
+  <button class="checkout-btn" onclick="checkout()">
+    Proceed to Checkout →
+  </button>
+</section>
+
+<script src="/static/js/cart.js"></script>
+</body>
+</html>

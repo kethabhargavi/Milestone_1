@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Dashboard | FoodExpress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/delivery.css">
+</head>
+
+<body>
+    
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+  <ul class="nav-links">
+    <li><a href="/delivery-dashboard" class="active">Dashboard</a></li>
+    <li><a href="/tracking">Orders</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="delivery-container">
+
+  <h1>👋 Welcome, Delivery Partner</h1>
+  <p class="subtitle">Here are your assigned orders</p>
+
+  <!-- STATS -->
+  <div class="delivery-stats">
+    <div class="stat-card">
+      <h3 id="assigned-count">0</h3>
+      <p>Assigned Orders</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="completed-count">0</h3>
+      <p>Delivered</p>
+    </div>
+    <div class="stat-card">
+      <h3>₹1,250</h3>
+      <p>Today Earnings</p>
+    </div>
+  </div>
+
+  <!-- ORDERS LIST -->
+  <div class="delivery-orders" id="delivery-orders">
+    <!-- Orders injected via JS -->
+  </div>
+
+</section>
+
+<script src="/static/js/delivery.js"></script>
+</body>
+</html>

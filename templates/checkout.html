@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | FoodExpress</title>
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <link rel="stylesheet" href="/static/css/checkout.css">
+</head>
+<body>
+   
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/cart" class="active">Cart <span id="cart-badge">0</span></a></li>
+  </ul>
+  <a href="/login" class="signin-btn">Sign In</a>
+</nav>
+
+<!-- CART SECTION -->
+<section class="cart-container">
+  <h1>Checkout</h1>
+
+  <!-- CART ITEMS WILL BE INSERTED HERE -->
+  <div id="cart-items"></div>
+
+  <!-- BILL SUMMARY -->
+  <div class="cart-summary">
+    <div>
+      <p>Item Total</p>
+      <p>Delivery Fee</p>
+      <p>Taxes & Charges</p>
+      <h3>Grand Total</h3>
+    </div>
+    <div>
+      <p id="item-total">₹0</p>
+      <p>₹30</p>
+      <p>₹20</p>
+      <h3 id="grand-total">₹0</h3>
+    </div>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="cart-summary">
+    <div>
+      <h3>Payment Method</h3>
+      <p>
+        <input type="radio" name="pay" checked> UPI <br>
+        <input type="radio" name="pay"> Credit / Debit Card <br>
+        <input type="radio" name="pay"> Cash on Delivery
+      </p>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">Place Order</button>
+  </div>
+</section>
+
+<script src="/static/js/checkout.js"></script>
+</body>
+</html>

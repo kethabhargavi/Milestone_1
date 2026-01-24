@@ -1,0 +1,147 @@
+/* =====================
+   COMMON STYLES
+===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f6f7f9;
+  padding: 30px;
+  color: #222;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* =====================
+   ORDER HISTORY
+===================== */
+
+#order-history {
+  max-width: 800px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.order-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.order-card p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.order-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #27ae60;
+}
+
+/* =====================
+   ORDER MANAGEMENT
+===================== */
+
+table {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+thead {
+  background: #ff6f00;
+  color: white;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* =====================
+   ORDER TRACKING
+===================== */
+
+#tracking-steps {
+  max-width: 600px;
+}
+
+.step {
+  background: #fff;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border-left: 5px solid #ccc;
+  font-size: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+
+.step.active {
+  border-left-color: #27ae60;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* =====================
+   EMPTY STATES
+===================== */
+
+.empty-msg {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #888;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 18px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}

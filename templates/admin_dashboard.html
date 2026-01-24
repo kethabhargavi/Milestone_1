@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | FoodExpress</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/admin.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="admin-navbar">
+  <div class="logo">Food<span>Express</span> Admin</div>
+  <ul class="nav-links">
+    <li><a href="/admin_dashboard" class="active">Dashboard</a></li>
+    <li><a href="/tracking" class="active">Orders</a></li>
+    <li><a href="/restaurants" class="active">Restaurants</a></li>
+    <li><a href="/customer_dashboard" class="active">Users</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN DASHBOARD -->
+<main class="dashboard-container">
+
+  <!-- STATS CARDS -->
+  <div class="stats-cards">
+    <div class="card">
+      <h3>Total Orders</h3>
+      <p id="total-orders">0</p>
+    </div>
+    <div class="card">
+      <h3>Total Revenue</h3>
+      <p id="total-revenue">₹0</p>
+    </div>
+    <div class="card">
+      <h3>Active Users</h3>
+      <p id="active-users">0</p>
+    </div>
+    <div class="card">
+      <h3>Registered Restaurants</h3>
+      <p id="total-restaurants">0</p>
+    </div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="charts-container">
+    <div class="chart-card">
+      <h3>Orders per Month</h3>
+      <canvas id="ordersChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Revenue per Category</h3>
+      <canvas id="revenueChart"></canvas>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ========== SAMPLE DATA ==========
+const totalOrders = 256;
+const totalRevenue = 145670;
+const activeUsers = 102;
+const totalRestaurants = 25;
+
+document.getElementById('total-orders').innerText = totalOrders;
+document.getElementById('total-revenue').innerText = `₹${totalRevenue}`;
+document.getElementById('active-users').innerText = activeUsers;
+document.getElementById('total-restaurants').innerText = totalRestaurants;
+
+// ======= CHART.JS =======
+// Orders per month
+const ctxOrders = document.getElementById('ordersChart').getContext('2d');
+const ordersChart = new Chart(ctxOrders, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        datasets: [{
+            label: 'Orders',
+            data: [20, 30, 40, 35, 50, 60, 45, 55, 70, 65, 80, 90],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        }
+    }
+});
+
+// Revenue per category
+const ctxRevenue = document.getElementById('revenueChart').getContext('2d');
+const revenueChart = new Chart(ctxRevenue, {
+    type: 'bar',
+    data: {
+        labels: ['Starters', 'Main Course', 'Biryani', 'Tiffins', 'Drinks', 'Desserts'],
+        datasets: [{
+            label: 'Revenue (₹)',
+            data: [15000, 40000, 30000, 12000, 8000, 15000],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.7)',
+              'rgba(54, 162, 235, 0.7)',
+              'rgba(255, 206, 86, 0.7)',
+              'rgba(75, 192, 192, 0.7)',
+              'rgba(153, 102, 255, 0.7)',
+              'rgba(255, 159, 64, 0.7)'
+            ],
+            borderColor: 'rgba(0,0,0,0.1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+            y: { beginAtZero: true }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

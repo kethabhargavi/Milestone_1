@@ -1,0 +1,17 @@
+.header {
+  background: var(--dark);
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}

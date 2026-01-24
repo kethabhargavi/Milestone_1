@@ -1,0 +1,168 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #333;
+}
+
+/* =========================
+   NAVBAR / HEADER
+========================= */
+.dashboard-nav {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 18px 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-nav h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.content-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.card h3,
+.card h4 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff4d4d;
+  box-shadow: 0 0 0 2px rgba(255,77,77,0.15);
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e63b3b;
+}
+
+/* Delete button */
+.card button {
+  margin-top: 10px;
+}
+
+.card button:nth-child(4) {
+  background: #444;
+}
+
+.card button:nth-child(4):hover {
+  background: #222;
+}
+
+/* =========================
+   ADDRESS LIST
+========================= */
+#address-list .card {
+  position: relative;
+}
+
+#address-list h4 {
+  font-size: 17px;
+}
+
+#address-list p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.empty-history {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .dashboard-nav h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,141 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #ff6f00;
+  --dark: #1c1c1c;
+  --light: #f8f9fb;
+  --card-bg: #ffffff;
+  --text-muted: #6c757d;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* ================= NAVBAR ================= */
+.admin-navbar {
+  height: 70px;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: var(--shadow);
+}
+
+.admin-navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.admin-navbar .logo span {
+  color: var(--primary);
+}
+
+.admin-navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.admin-navbar .nav-links li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.admin-navbar .nav-links li a:hover,
+.admin-navbar .nav-links li a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ================= MAIN DASHBOARD ================= */
+.dashboard-container {
+  padding: 40px;
+}
+
+/* ================= STATS CARDS ================= */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stats-cards .card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.stats-cards .card:hover {
+  transform: translateY(-6px);
+}
+
+.stats-cards .card h3 {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.stats-cards .card p {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* ================= CHARTS ================= */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.chart-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.chart-card h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .admin-navbar .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+}

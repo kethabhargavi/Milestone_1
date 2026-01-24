@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodExpress - Menu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Food<span>Express</span></div>
+
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/cart">Cart <span id="cart-badge">0</span></a></li>
+  </ul>
+
+  <a href="/login" class="signin-btn">Sign In</a>
+</nav>
+
+<!-- MOBILE MENU -->
+<ul class="mobile-menu" id="mobile-menu">
+  <li><a href="/">Home</a></li>
+  <li><a href="/menu">Menu</a></li>
+  <li><a href="/cart">Cart <span id="mobile-cart-badge">0</span></a></li>
+  <li><a href="/login">Sign In</a></li>
+</ul>
+
+<!-- MENU HERO -->
+<section class="menu-hero">
+  <h1>Explore our delicious menu</h1>
+  <p>Choose from top restaurants near you</p>
+</section>
+
+<!-- MENU CATEGORIES -->
+<section class="menu-categories">
+  <button class="category-btn active" onclick="filterCategory(event, 'Starters')">Starters</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Desserts')">Desserts</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Veg Biryani')">Veg Biryani</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Non-Veg Biryani')">Non-Veg Biryani</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Tiffins')">Tiffins</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Drinks')">Drinks</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Veg Curries')">Veg Curries</button>
+  <button class="category-btn" onclick="filterCategory(event, 'Nonveg Curries')">Nonveg Curries</button>
+</section>
+
+<!-- FOOD MENU ITEMS -->
+<section class="menu-items">
+  <div class="menu-grid">
+
+    <!-- ======= Starters ======= -->
+    <div class="menu-card" data-category="Starters">
+      <img src="https://picsum.photos/300/200?random=101" alt="Veg Spring Rolls">
+      <h3>Veg Spring Rolls</h3>
+      <p>Crispy rolls with fresh veggies.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹150</span>
+        <button class="add-btn" 
+        onclick="addToCart('Veg Spring Rolls', 150, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+
+      </div>
+    </div>
+
+    <!-- ======= Desserts ======= -->
+    <div class="menu-card" data-category="Desserts">
+      <img src="https://picsum.photos/300/200?random=102" alt="Chocolate Brownie">
+      <h3>Chocolate Brownie</h3>
+      <p>Rich chocolate brownie served with ice cream.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹120</span>
+        <button class="add-btn" 
+        onclick="addToCart('Chocolate Brownie', 120, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+
+      </div>
+    </div>
+
+    <!-- ======= Veg Biryani ======= -->
+    <div class="menu-card" data-category="Veg Biryani">
+      <img src="https://picsum.photos/300/200?random=103" alt="Veg Biryani">
+      <h3>Veg Biryani</h3>
+      <p>Aromatic basmati rice with vegetables and spices.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹200</span>
+        <button class="add-btn" 
+        onclick="addToCart('Veg Biryani', 200, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+
+      </div>
+    </div>
+
+    <!-- ======= Non-Veg Biryani ======= -->
+    <div class="menu-card" data-category="Non-Veg Biryani">
+      <img src="https://picsum.photos/300/200?random=104" alt="Chicken Biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Spiced basmati rice with tender chicken pieces.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹250</span>
+        <button class="add-btn" 
+        onclick="addToCart('Chicken Biryani', 250, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+
+      </div>
+    </div>
+
+    <!-- ======= Tiffins ======= -->
+    <div class="menu-card" data-category="Tiffins">
+      <img src="https://picsum.photos/300/200?random=105" alt="Masala Dosa">
+      <h3>Masala Dosa</h3>
+      <p>Crispy rice crepe with spiced potato filling.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹120</span>
+        <button class="add-btn" 
+        onclick="addToCart('Masala Dosa', 120, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+
+      </div>
+    </div>
+
+    <!-- ======= Drinks ======= -->
+    <div class="menu-card" data-category="Drinks">
+      <img src="https://picsum.photos/300/200?random=106" alt="Mango Shake">
+      <h3>Mango Shake</h3>
+      <p>Fresh mango blended with milk and ice.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹80</span>
+        <button class="add-btn" onclick="addToCart('Mango Shake', 80, 'https://picsum.photos/300/200?random=11')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- ======= Veg Curries ======= -->
+    <div class="menu-card" data-category="Veg Curries">
+      <img src="https://picsum.photos/300/200?random=107" alt="Paneer Butter Masala">
+      <h3>Paneer Butter Masala</h3>
+      <p>Creamy tomato gravy with soft paneer cubes.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹180</span>
+        <button class="add-btn" onclick="addToCart('Paneer Butter Masala', 180, 'https://picsum.photos/300/200?random=11')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- ======= Nonveg Curries ======= -->
+    <div class="menu-card" data-category="Nonveg Curries">
+      <img src="https://picsum.photos/300/200?random=108" alt="Chicken Curry">
+      <h3>Chicken Curry</h3>
+      <p>Spicy chicken curry cooked with Indian masalas.</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty(this)">-</button>
+        <span>1</span>
+        <button onclick="increaseQty(this)">+</button>
+      </div>
+      <div class="menu-footer">
+        <span class="price">₹220</span>
+        <button class="add-btn" 
+        onclick="addToCart('Chicken Curry', 220, 'https://picsum.photos/300/200?random=11')">
+  Add to Cart
+</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</body>
+</html>
